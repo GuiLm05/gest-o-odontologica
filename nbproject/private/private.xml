@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/auth/login.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/index.html</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/pacientes/excluir.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/src/java/model/DAO/DentistaDAO.java</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/dentistas/excluir.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/dentistas/listar.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/pacientes/listar.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/agendamentos/excluir.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/src/java/model/DAO/ConsultaDAO.java</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/agendamentos/cadastrar.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/src/java/model/Consulta.java</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/src/java/model/Paciente.java</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/src/java/model/Dentista.java</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/src/java/Config/ConectaBanco.java</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/consultas/cadastrar.jsp</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/src/java/model/ConsultaProcedimento.java</file>
+            <file>file:/C:/Users/Guilherme%20Lima/OneDrive%20-%20CARBON%20CARS/Documentos/NetBeansProjects/gestao_odont/web/jsp/auth/logout.jsp</file>
+        </group>
+    </open-files>
+</project-private>
