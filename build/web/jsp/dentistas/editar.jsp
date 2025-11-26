@@ -1,3 +1,8 @@
+<%-- 
+    Document   : editar
+    Created on : 25 de nov. de 2025
+    Author     : Guilherme Lima
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="model.DAO.DentistaDAO" %>
 <%@ page import="model.Dentista" %>

@@ -2,6 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+/**
+ *
+ * @author Guilherme Lima
+ */
 package model.DAO;
 
 import Config.ConectaBanco;
@@ -12,10 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import model.Paciente;
 
-/**
- *
- * @author Guilherme Lima
- */
 public class PacienteDAO {
 
     // 1. LISTAR (SELECT)
@@ -91,7 +91,7 @@ public class PacienteDAO {
                 stmt.setNull(5, java.sql.Types.DATE);
             }
 
-            stmt.setString(6, p.getEndereco()); // Campo novo
+            stmt.setString(6, p.getEndereco()); 
 
             stmt.executeUpdate();
             return true;
@@ -103,7 +103,7 @@ public class PacienteDAO {
         }
     }
 
-    // 4. ATUALIZAR (UPDATE) - O QUE ESTAVA FALTANDO/DANDO ERRO
+    // 4. ATUALIZAR (UPDATE)
     public boolean atualizar(Paciente p) {
         // Atualiza todos os campos, inclusive endereço
         String sql = "UPDATE paciente SET nome=?, cpf=?, telefone=?, email=?, data_nascimento=?, endereco=? WHERE id=?";

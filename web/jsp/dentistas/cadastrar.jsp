@@ -1,16 +1,30 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="model.DAO.DentistaDAO" %>
-<%@ page import="model.Dentista" %>
+<%-- 
+    Document   : cadastrar
+    Created on : 25 de nov. de 2025
+    Author     : Guilherme Lima
+--%>
 
+<%-- Configurações da Página --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%-- Importações Java --%>
+<%@ page import="model.DAO.DentistaDAO" %> <%-- Para salvar no banco --%>
+<%@ page import="model.Dentista" %>        <%-- Objeto com os dados --%>
+
+<%-- Includes: Cabeçalho e Menu --%>
 <jsp:include page="/jsp/includes/header.jsp" />
 <jsp:include page="/jsp/includes/menu.jsp" />
 
+<%-- 2. ESTRUTURA DO LAYOUT (BOOTSTRAP) --%>
 <div class="container">
     <div class="row justify-content-center">
+        <%-- Define a largura do card  --%>
         <div class="col-md-9 col-lg-7">
 
+            <%-- O CARTÃO PRINCIPAL --%>
             <div class="card shadow-lg border-0 rounded-3">
                 
+                <%-- Cabeçalho Azul (Identidade Visual de Dentista) --%>
                 <div class="card-header bg-primary text-white py-3">
                     <h4 class="mb-0 fw-bold">
                         <i class="bi bi-person-badge-fill me-2"></i> Cadastrar Dentista
@@ -20,14 +34,16 @@
                 <div class="card-body p-4">
 
                     <%
+                        // Só roda se o usuário clicou em Salvar (POST)
                         if ("POST".equalsIgnoreCase(request.getMethod())) {
+                            // Recebe os dados do formulário HTML
                             String nome = request.getParameter("nome");
                             String cro = request.getParameter("cro");
                             String especialidade = request.getParameter("especialidade");
-                            // Pegando novos campos
-                            String cpf = request.getParameter("cpf");
-                            String telefone = request.getParameter("telefone");
+                            String cpf = request.getParameter("cpf");       
+                            String telefone = request.getParameter("telefone"); 
 
+                            // Cria o objeto Dentista
                             Dentista d = new Dentista();
                             d.setNome(nome);
                             d.setCro(cro);
@@ -35,10 +51,14 @@
                             d.setCpf(cpf);
                             d.setTelefone(telefone);
 
+                            // Chama o DAO para salvar
                             DentistaDAO dao = new DentistaDAO();
+                            
                             if (dao.inserir(d)) {
+                                // Se salvou, manda pra lista
                                 response.sendRedirect("listar.jsp");
                             } else {
+                                // Se deu erro, mostra alerta vermelho na tela
                     %>
                                 <div class="alert alert-danger d-flex align-items-center" role="alert">
                                     <i class="bi bi-exclamation-triangle-fill me-2"></i>
@@ -49,6 +69,7 @@
                         }
                     %>
 
+                    <%-- 4. FORMULÁRIO HTML --%>
                     <form method="post">
                         
                         <div class="mb-3">

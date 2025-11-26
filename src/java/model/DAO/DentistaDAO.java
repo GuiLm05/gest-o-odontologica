@@ -2,6 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+/**
+ *
+ * @author Guilherme Lima
+ */
 package model.DAO;
 
 import Config.ConectaBanco;
@@ -108,7 +112,7 @@ public class DentistaDAO {
         }
     }
 
-    // 5. EXCLUIR (O QUE ESTAVA FALTANDO)
+    // 5. EXCLUIR
     public boolean excluir(int id) {
         String sql = "DELETE FROM dentista WHERE id=?";
 

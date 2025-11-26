@@ -1,3 +1,8 @@
+<%-- 
+    Document   : excluir
+    Created on : 25 de nov. de 2025
+    Author     : Guilherme Lima
+--%>
 <%@ page import="model.DAO.DentistaDAO" %>
 <%
     String idStr = request.getParameter("id");

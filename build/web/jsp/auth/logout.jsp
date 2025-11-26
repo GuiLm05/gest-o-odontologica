@@ -1,6 +1,6 @@
 <%-- 
     Document   : logout
-    Created on : 25 de nov. de 2025, 11:00:02
+    Created on : 25 de nov. de 2025
     Author     : Guilherme Lima
 --%>
 

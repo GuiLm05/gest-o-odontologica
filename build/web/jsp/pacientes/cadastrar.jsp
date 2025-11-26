@@ -1,16 +1,27 @@
+<%-- 
+    Document   : cadastrar
+    Created on : 25 de nov. de 2025
+    Author     : Guilherme Lima
+--%>
+
+<%-- Configurações e Importações --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="model.DAO.PacienteDAO" %>
-<%@ page import="model.Paciente" %>
+<%@ page import="model.DAO.PacienteDAO" %> <%-- Para salvar no banco --%>
+<%@ page import="model.Paciente" %>        <%-- Modelo de dados --%>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 
+<%-- Includes de Cabeçalho e Menu --%>
 <jsp:include page="/jsp/includes/header.jsp" />
 <jsp:include page="/jsp/includes/menu.jsp" />
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-9 col-lg-7"> <div class="card shadow-lg border-0 rounded-3">
+        <div class="col-md-9 col-lg-7"> <%-- Define a largura do formulário --%>
+
+            <div class="card shadow-lg border-0 rounded-3">
                 
+                <%-- Cabeçalho Verde (Identidade Visual de Pacientes) --%>
                 <div class="card-header bg-success text-white py-3">
                     <h4 class="mb-0 fw-bold">
                         <i class="bi bi-person-plus-fill me-2"></i> Cadastrar Paciente
@@ -19,9 +30,12 @@
 
                 <div class="card-body p-4">
 
+                    <%-- Processamento do Formulário--%>
                     <%
+                        // Verifica se o formulário foi enviado
                         if ("POST".equalsIgnoreCase(request.getMethod())) {
                             try {
+                                // Coleta os dados dos campos
                                 String nome = request.getParameter("nome");
                                 String cpf = request.getParameter("cpf");
                                 String telefone = request.getParameter("telefone");
@@ -29,6 +43,7 @@
                                 String dataStr = request.getParameter("data_nascimento");
                                 String endereco = request.getParameter("endereco");
 
+                                // Cria o objeto Paciente e preenche
                                 Paciente p = new Paciente();
                                 p.setNome(nome);
                                 p.setCpf(cpf);
@@ -36,15 +51,19 @@
                                 p.setEmail(email);
                                 p.setEndereco(endereco);
 
+                                // Converte a data (Texto -> Objeto Date)
                                 if (dataStr != null && !dataStr.isEmpty()) {
                                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                     p.setDataNascimento(sdf.parse(dataStr));
                                 }
 
+                                // Salva no banco usando o DAO
                                 PacienteDAO dao = new PacienteDAO();
                                 if (dao.inserir(p)) {
+                                    // Sucesso: vai para a lista
                                     response.sendRedirect("listar.jsp");
                                 } else {
+                                    // Erro: mostra alerta
                     %>
                                     <div class="alert alert-danger d-flex align-items-center" role="alert">
                                         <i class="bi bi-exclamation-triangle-fill me-2"></i>
@@ -53,6 +72,7 @@
                     <%
                                 }
                             } catch (Exception e) {
+                                // Erro técnico (exceção)
                     %>
                                 <div class="alert alert-danger d-flex align-items-center" role="alert">
                                     <i class="bi bi-bug-fill me-2"></i>
@@ -64,8 +84,10 @@
                         }
                     %>
 
+                    <%-- 3. FORMULÁRIO HTML --%>
                     <form method="post">
                         
+                        <%-- Campo Nome --%>
                         <div class="mb-3">
                             <label class="form-label fw-bold text-secondary">Nome Completo</label>
                             <div class="input-group">
@@ -74,6 +96,7 @@
                             </div>
                         </div>
 
+                        <%-- Linha com CPF e Telefone lado a lado --%>
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label fw-bold text-secondary">CPF</label>
@@ -91,6 +114,7 @@
                             </div>
                         </div>
 
+                        <%-- Campo Email --%>
                         <div class="mb-3">
                             <label class="form-label fw-bold text-secondary">E-mail</label>
                             <div class="input-group">
@@ -99,6 +123,7 @@
                             </div>
                         </div>
 
+                        <%-- Campo Endereço --%>
                         <div class="mb-3">
                             <label class="form-label fw-bold text-secondary">Endereço</label>
                             <div class="input-group">
@@ -107,11 +132,13 @@
                             </div>
                         </div>
 
+                        <%-- Campo Data de Nascimento --%>
                         <div class="mb-4">
                             <label class="form-label fw-bold text-secondary">Data de Nascimento</label>
                             <input type="date" name="data_nascimento" class="form-control" required>
                         </div>
 
+                        <%-- Botões de Ação --%>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a href="listar.jsp" class="btn btn-outline-secondary me-md-2">
                                 <i class="bi bi-arrow-left"></i> Voltar
@@ -130,4 +157,5 @@
 </div>
 
 <br><br>
+<%-- Rodapé --%>
 <jsp:include page="/jsp/includes/footer.jsp" />

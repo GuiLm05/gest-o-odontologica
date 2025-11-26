@@ -1,3 +1,7 @@
+/**
+ *
+ * @author Guilherme Lima
+ */
 package model.DAO;
 
 import Config.ConectaBanco;
@@ -6,12 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import model.Procedimento;
 
-/**
- * @author Guilherme Lima
- */
 public class ProcedimentoDAO {
     
-    // Método 1: Listar todos (para o combobox)
+    // Método 1: Listar todos 
     public List<Procedimento> listar() {
         List<Procedimento> lista = new ArrayList<>();
         String sql = "SELECT * FROM procedimento";
@@ -34,7 +35,6 @@ public class ProcedimentoDAO {
     }
 
     // Método 2: Buscar pelo ID da Consulta (para a tabela de listagem)
-    // AGORA ESTÁ DENTRO DA CLASSE CORRETAMENTE
     public Procedimento buscarPorIdConsulta(int idConsulta) {
         Procedimento p = null;
         // O SQL faz um JOIN para achar o procedimento ligado à consulta
@@ -60,4 +60,4 @@ public class ProcedimentoDAO {
         return p;
     }
     
-} // <--- A chave que fecha a classe fica SÓ AQUI NO FINAL
+}

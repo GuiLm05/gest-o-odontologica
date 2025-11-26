@@ -1,3 +1,8 @@
+<%-- 
+    Document   : validarlogin
+    Created on : 25 de nov. de 2025
+    Author     : Guilherme Lima
+--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <%@page import="Config.ConectaBanco"%>
