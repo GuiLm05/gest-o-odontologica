@@ -4,7 +4,7 @@
  */
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 package model.DAO;
 
@@ -18,7 +18,7 @@ import model.Paciente;
 
 public class PacienteDAO {
 
-    // 1. LISTAR (SELECT)
+    // Listar (Select)
     public List<Paciente> listar() {
         List<Paciente> lista = new ArrayList<>();
         String sql = "SELECT * FROM paciente";
@@ -44,7 +44,7 @@ public class PacienteDAO {
         return lista;
     }
 
-    // 2. BUSCAR POR ID (SELECT WHERE ID)
+    // Buscar por ID (Select where ID)
     public Paciente buscarPorId(int id) {
         Paciente p = null;
         String sql = "SELECT * FROM paciente WHERE id=?";
@@ -63,7 +63,7 @@ public class PacienteDAO {
                 p.setTelefone(rs.getString("telefone"));
                 p.setEmail(rs.getString("email"));
                 p.setDataNascimento(rs.getDate("data_nascimento"));
-                p.setEndereco(rs.getString("endereco")); // Campo novo
+                p.setEndereco(rs.getString("endereco"));
             }
 
         } catch (Exception e) {
@@ -72,7 +72,7 @@ public class PacienteDAO {
         return p;
     }
 
-    // 3. INSERIR (INSERT)
+    // Inserir (Insert)
     public boolean inserir(Paciente p) {
         String sql = "INSERT INTO paciente (nome, cpf, telefone, email, data_nascimento, endereco) VALUES (?,?,?,?,?,?)";
 
@@ -84,7 +84,6 @@ public class PacienteDAO {
             stmt.setString(3, p.getTelefone());
             stmt.setString(4, p.getEmail());
             
-            // Tratamento de data nula
             if (p.getDataNascimento() != null) {
                 stmt.setDate(5, new java.sql.Date(p.getDataNascimento().getTime()));
             } else {
@@ -103,7 +102,7 @@ public class PacienteDAO {
         }
     }
 
-    // 4. ATUALIZAR (UPDATE)
+    // Atualizar (Update)
     public boolean atualizar(Paciente p) {
         // Atualiza todos os campos, inclusive endereço
         String sql = "UPDATE paciente SET nome=?, cpf=?, telefone=?, email=?, data_nascimento=?, endereco=? WHERE id=?";
@@ -124,7 +123,6 @@ public class PacienteDAO {
 
             stmt.setString(6, p.getEndereco());
             
-            // O ID é o último parâmetro do WHERE
             stmt.setInt(7, p.getId());
 
             stmt.executeUpdate();
@@ -136,7 +134,7 @@ public class PacienteDAO {
         }
     }
 
-    // 5. EXCLUIR (DELETE)
+    // Excluir (Delete)
     public boolean excluir(int id) {
         String sql = "DELETE FROM paciente WHERE id=?";
 

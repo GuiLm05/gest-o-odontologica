@@ -4,7 +4,7 @@
  */
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 package model.DAO;
 
@@ -16,7 +16,7 @@ import model.Dentista;
 
 public class DentistaDAO {
 
-    // 1. LISTAR
+    // Listar
     public List<Dentista> listar() {
         List<Dentista> lista = new ArrayList<>();
         String sql = "SELECT * FROM dentista";
@@ -41,7 +41,7 @@ public class DentistaDAO {
         return lista;
     }
 
-    // 2. BUSCAR POR ID (Usado no Editar)
+    // Buscar no ID (Usado no Editar)
     public Dentista buscarPorId(int id) {
         Dentista d = null;
         String sql = "SELECT * FROM dentista WHERE id=?";
@@ -67,7 +67,7 @@ public class DentistaDAO {
         return d;
     }
 
-    // 3. INSERIR
+    // Inserir
     public boolean inserir(Dentista d) {
         String sql = "INSERT INTO dentista (nome, cro, especialidade, cpf, telefone) VALUES (?,?,?,?,?)";
 
@@ -89,7 +89,7 @@ public class DentistaDAO {
         }
     }
 
-    // 4. ATUALIZAR (Necessário para o Editar funcionar)
+    // Atualizar (Necessário para o Editar funcionar)
     public boolean atualizar(Dentista d) {
         String sql = "UPDATE dentista SET nome=?, cro=?, especialidade=?, cpf=?, telefone=? WHERE id=?";
 
@@ -112,7 +112,7 @@ public class DentistaDAO {
         }
     }
 
-    // 5. EXCLUIR
+    // Excluir
     public boolean excluir(int id) {
         String sql = "DELETE FROM dentista WHERE id=?";
 

@@ -1,6 +1,6 @@
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 package model.DAO;
 
@@ -12,7 +12,7 @@ import model.Procedimento;
 
 public class ProcedimentoDAO {
     
-    // Método 1: Listar todos 
+    // Listar todos 
     public List<Procedimento> listar() {
         List<Procedimento> lista = new ArrayList<>();
         String sql = "SELECT * FROM procedimento";
@@ -34,7 +34,7 @@ public class ProcedimentoDAO {
         return lista;
     }
 
-    // Método 2: Buscar pelo ID da Consulta (para a tabela de listagem)
+    // Buscar pelo ID da Consulta (para a tabela de listagem)
     public Procedimento buscarPorIdConsulta(int idConsulta) {
         Procedimento p = null;
         // O SQL faz um JOIN para achar o procedimento ligado à consulta

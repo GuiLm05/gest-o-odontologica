@@ -1,7 +1,7 @@
 <%-- 
     Document   : footer
     Created on : 24 de nov. de 2025
-    Author     : Guilherme Lima
+    Author     : Guilherme Lima e Arthur Randis
 --%>
 
 </div> 

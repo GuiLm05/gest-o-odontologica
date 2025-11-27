@@ -5,7 +5,7 @@
 
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 package model;
 
@@ -21,6 +21,7 @@ public class Dentista {
     public Dentista() {
     }
 
+    // Método get set
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -32,8 +33,7 @@ public class Dentista {
 
     public String getEspecialidade() { return especialidade; }
     public void setEspecialidade(String especialidade) { this.especialidade = especialidade; }
-
-    // NOVOS GETTERS E SETTERS
+    
     public String getCpf() { return cpf; }
     public void setCpf(String cpf) { this.cpf = cpf; }
 

@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 public class Pessoa {
     private String nome;
@@ -20,7 +20,7 @@ public class Pessoa {
         this.cpf = cpf;
         this.telefone = telefone;
     }
-
+    // Método get set
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
 

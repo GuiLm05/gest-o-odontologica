@@ -1,6 +1,6 @@
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 package model.DAO;
 
@@ -12,8 +12,7 @@ import model.Consulta;
 
 public class ConsultaDAO {
 
-    // --- MÉTODO LISTAR ---
-    // Busca todas as consultas do banco para mostrar na tabela
+    // Método para Listar
     public List<Consulta> listar() {
         List<Consulta> lista = new ArrayList<>();
         String sql = "SELECT * FROM consulta"; 
@@ -38,12 +37,11 @@ public class ConsultaDAO {
         return lista;
     }
     
-    // --- MÉTODO EXCLUIR ---
-    // Remove uma consulta. Precisa de cuidado especial por causa da chave estrangeira.
+    // Método Excluir
     public boolean excluir(int id) {
-        // 1. SQL para apagar o vínculo na tabela 'consulta_procedimento' (Filha)
+        // 1. SQL para apagar o vínculo na tabela 'consulta_procedimento'
         String sqlLigacao = "DELETE FROM consulta_procedimento WHERE id_consulta=?";
-        // 2. SQL para apagar a consulta na tabela 'consulta' (Pai)
+        // 2. SQL para apagar a consulta na tabela 'consulta'
         String sqlConsulta = "DELETE FROM consulta WHERE id=?";
         
         Connection conn = null;
@@ -80,8 +78,7 @@ public class ConsultaDAO {
         }
     }
 
-    // --- MÉTODO INSERIR ---
-    // Salva a consulta E o procedimento escolhido ao mesmo tempo.
+    // Método Insert
     public boolean inserir(Consulta c, int idProcedimento) {
         // SQL para criar a consulta
         String sqlConsulta = "INSERT INTO consulta (id_paciente, id_dentista, data_consulta, observacoes) VALUES (?,?,?,?)";

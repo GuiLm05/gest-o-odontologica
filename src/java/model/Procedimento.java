@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 
 public class Procedimento {

@@ -1,7 +1,7 @@
 <%-- 
     Document   : cadastrar
     Created on : 25 de nov. de 2025
-    Author     : Guilherme Lima
+    Author     : Guilherme Lima e Arthur Randis
 --%>
 
 <%-- Configurações da Página --%>
@@ -76,7 +76,7 @@
                             <label class="form-label fw-bold text-secondary">Nome Completo</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
-                                <input type="text" name="nome" class="form-control form-control-lg" placeholder="Dr. Fulano de Tal" required>
+                                <input type="text" name="nome" class="form-control form-control-lg" required>
                             </div>
                         </div>
 

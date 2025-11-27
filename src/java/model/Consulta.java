@@ -4,7 +4,7 @@
  */
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 package model;
 
@@ -31,7 +31,7 @@ public class Consulta {
         this.observacoes = observacoes;
     }
 
-    // --- GETTERS E SETTERS ---
+    // Método get set
 
     public int getId() {
         return id;

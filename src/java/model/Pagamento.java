@@ -6,7 +6,7 @@ package model;
 import java.util.Date;
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 public class Pagamento {
     private int idPagamento;

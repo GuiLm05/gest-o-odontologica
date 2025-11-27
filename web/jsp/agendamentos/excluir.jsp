@@ -1,7 +1,7 @@
 <%-- 
     Document   : excluir
     Created on : 25 de nov. de 2025
-    Author     : Guilherme Lima
+    Author     : Guilherme Lima e Arthur Randis
 --%>
 
 <%@ page import="model.DAO.ConsultaDAO" %>

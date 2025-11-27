@@ -1,7 +1,7 @@
 <%-- 
     Document   : listar
     Created on : 25 de nov. de 2025
-    Author     : Guilherme Lima
+    Author     : Guilherme Lima e Arthur Randis
 --%>
 
 <%-- Configurações e Importações --%>
@@ -28,7 +28,7 @@
             </a>
         </div>
 
-        <%-- 3. SISTEMA DE ALERTAS (Feedback visual) --%>
+        <%-- 3. Sistema de Alertas (Feedback visual) --%>
         <% 
             // Verifica se a URL tem parâmetros de erro ou sucesso (vindos do excluir.jsp)
             String erro = request.getParameter("erro");

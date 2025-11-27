@@ -4,7 +4,7 @@
  */
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 package model;
 

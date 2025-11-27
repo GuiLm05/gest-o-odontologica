@@ -6,11 +6,12 @@ package Config;
 import java.sql.*;
 /**
  *
- * @author Guilherme Lima
+ * @author Guilherme Lima e Arthur Randis
  */
 public class ConectaBanco {
     public static Connection conectar() throws ClassNotFoundException {
-        // Abre uma conexão
+        
+    // Abre uma conexão
         Connection conn = null; 
         try{
             Class.forName("com.mysql.jdbc.Driver");

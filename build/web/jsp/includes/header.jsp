@@ -1,7 +1,7 @@
 <%-- 
     Document   : header
     Created on : 25 de nov. de 2025
-    Author     : Guilherme Lima
+    Author     : Guilherme Lima e Arthur Randis
 --%>
 
 <%-- Configura a página para aceitar acentos e caracteres especiais --%>
